@@ -17,6 +17,17 @@ df.loc[len(df.index)] = new_row_loc
 new_row_loc2 = {'Name': 'GF2', 'Age': 30, 'City': 'City2'}
 df.loc[len(df.index)] = new_row_loc2
 
+####
+# # Adding new row to df for V2
+new_row_loc3 = {'Name': 'GF3', 'Age': 22, 'City': 'City3'}
+df.loc[len(df.index)] = new_row_loc3
+
+# # Adding new row to df for V3
+new_row_loc4 = {'Name': 'GF4', 'Age': 34, 'City': 'City4'}
+df.loc[len(df.index)] = new_row_loc4
+
+### 
+
 # Ensure the "data" directory exists at the root level
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
@@ -28,6 +39,3 @@ file_path = os.path.join(data_dir, 'sample_data.csv')
 df.to_csv(file_path, index=False)
 
 print(f"CSV file saved to {file_path}")
-
-df = pd.read_csv("D:\MLOps\VikashDas\dvc\mlops-dvc\data\sample_data.csv")
-print(df)
